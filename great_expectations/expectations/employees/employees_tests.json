@@ -1,0 +1,59 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "employees.suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "employee_id"
+          ,"first_name"
+          ,"last_name"
+          ,"email"
+          ,"phone_number"
+          ,"hire_date"
+          ,"job_id"
+          ,"salary"
+          ,"manager_id"
+          ,"department_id"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 30,
+        "min_value": 10
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "job_id",
+        "max_value": 1,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "salary",
+        "max_value": 200000,
+        "min_value": 5000
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "salary",
+        "max_value": 10000,
+        "min_value": 7000
+      },
+      "meta": {}
+    }
+  ]
+}
